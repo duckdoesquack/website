@@ -1,0 +1,222 @@
+/* for all main pages */
+main {
+  flex: 1;
+  padding: 20px;
+
+  /* soft radial gradient from center */
+  background: radial-gradient(circle at center, #38dbf4, #E6F0F3);
+}
+
+.page-title {
+  color: black;
+  font-size: 35px;
+}
+
+/*fonts and height and site margin and paddinbg*/
+html, body {
+  font-family: 'Alata', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* flex container to arrange nav and content side-by-side */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* nav size*/
+nav {
+   width: 200px;
+   background-color: #A8D5BA; /* light pastel mint to have a calming yet subtle feel */
+   padding: 20px; 
+   flex-shrink: 0;
+}
+
+/* making the "nav page" to the center */
+nav > h1 {
+  text-align: center;
+}
+
+/* html page links */
+nav > ul {
+   list-style-type:none;
+   line-height:2em;
+   padding-left: 0;  /* removes extra space on the left */
+   margin-left: 0;   /* removes browser's default margin */
+}
+
+/* styling the nav links */
+nav a[href] {
+   color: #2F4F4F;  /* dark slate gray for readability */
+   text-decoration: none;
+   font-weight: bold;
+}
+
+/* hover effect on nav links */
+nav a[href]:hover {
+   color: #E07A5F;  /* warm coral for subtle highlight */
+   text-decoration: underline;
+}
+
+/* emoji before nav link */
+nav a[href]::before {
+  content: "🍃 ";
+  font-size: 1.2em;
+}
+
+/* sections font colour */
+section > h2 {
+    color: blue;
+}
+
+/* sorting the principles into borders*/
+.principles li {
+  border: 2px solid #A8D5BA;       /* light green border */
+  border-radius: 10px;             /* rounded corners */
+  padding: 15px;                   /* space inside the border */
+  margin-bottom: 20px;             /* space between each principle */
+  background-color: #f9fff9;       /* background color */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* shadow */
+}
+
+/* images */
+.image-row {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; /* spacing between images */
+  margin-top: 20px;
+}
+
+/* style for images */
+.image-row img {
+  width: 30%; /* ensures they fit in a row */
+  height: auto; 
+  border-radius: 10px; /* for rounded corners */
+}
+
+/*hover effect*/
+.image-row img:hover { 
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+  transform: scale(1.05);
+}
+
+/* checkbox for reader to tick */
+input[type="checkbox"]{
+ transform:scale(1.5);
+}
+
+.checklist{
+ list-style-type: none;
+ padding-left: 0;
+}
+
+/* index2.html */
+
+/* using grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* left column: text, right column: images */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 20px 40px; /* row-gap and column-gap */
+  padding: 20px;
+  align-items: start;
+  font-size: 1.2em;
+}
+
+/* each p should go into one row of the left column */
+.grid-container p:nth-of-type(1) {
+  grid-row: 1;
+  grid-column: 1;
+}
+.grid-container p:nth-of-type(2) {
+  grid-row: 2;
+  grid-column: 1;
+}
+.grid-container p:nth-of-type(3) {
+  grid-row: 3;
+  grid-column: 1;
+}
+
+/* images should be separated into rows in the right column */
+.images {
+  display: contents; /* allow the <img> elements to be placed directly in the grid */
+}
+
+.images img:nth-of-type(1) {
+  grid-row: 1;
+  grid-column: 2;
+}
+.images img:nth-of-type(2) {
+  grid-row: 2;
+  grid-column: 2;
+}
+.images img:nth-of-type(3) {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+/* style for images */
+.grid-container img {
+  width: 300px;
+  height: auto;
+  border-style: solid;
+  border-width: medium;
+  border-color: #a74646;
+  border-radius: 50px;
+}
+
+/*hover effect*/
+.grid-container img:hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+  transform: scale(1.05);
+}
+
+/* index3.html */
+
+/* float layout for page*/
+.about-content {
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+/* left side text float */
+.text-section {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 20px;
+}
+
+/* text section */
+.text-section p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+/* using CSS grid for images on the right */
+.image-grid {
+  column-count: 2;
+  column-gap: 20px;
+  width: 48%;
+}
+
+/* grid images */
+.image-grid img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*hover effect*/
+.image-grid img:hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+  transform: scale(1.05);
+}
